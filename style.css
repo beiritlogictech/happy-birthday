@@ -1,0 +1,48 @@
+body {
+        margin: 0;
+        padding: 0;
+        background: #f7c4d5;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;   
+    }
+
+    .greeting-img {
+        width: 90%;      
+        max-width: 1090px;         
+        height: auto;              
+        object-fit: contain;
+        display: block;
+    }
+
+.snowflake {
+    position: fixed;
+    top: -10px;
+    color: white;
+    font-size: 20px;
+    opacity: 0.9;
+    user-select: none;
+    pointer-events: none;
+    animation: fall linear infinite;
+}
+
+@keyframes fall {
+    0% {
+        transform: translateX(0) translateY(0);
+    }
+    50% {
+        transform: translateX(20px) translateY(50vh);
+    }
+    100% {
+        transform: translateX(-20px) translateY(100vh);
+    }
+}
+
+
+    @media (max-width: 768px) {
+        .greeting-img {
+            width: 100%;
+            max-width: 95%;
+        }
+    }
